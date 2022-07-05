@@ -1,3 +1,10 @@
+/*
+ * @Author: nhsoft.wh
+ * @Date: 2022-07-05 00:33:56
+ * @LastEditors: nhsoft.wh
+ * @LastEditTime: 2022-07-05 22:48:18
+ * @Description: file content
+ */
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
 export default (appInfo: EggAppInfo) => {
@@ -9,6 +16,11 @@ export default (appInfo: EggAppInfo) => {
 
   // add your egg config in here
   config.middleware = [];
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
 
   // add your special config in here
   const bizConfig = {

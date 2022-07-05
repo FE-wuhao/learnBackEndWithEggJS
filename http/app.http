@@ -1,0 +1,7 @@
+### post请求
+POST http://127.0.0.1:7001/test/10086?name=wuhao HTTP/1.1
+content-type: application/json
+
+{
+  "color":"red"
+}
