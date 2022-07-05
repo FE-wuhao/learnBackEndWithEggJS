@@ -2,7 +2,7 @@
  * @Author: nhsoft.wh
  * @Date: 2022-07-05 00:33:56
  * @LastEditors: nhsoft.wh
- * @LastEditTime: 2022-07-05 22:48:18
+ * @LastEditTime: 2022-07-06 00:20:47
  * @Description: file content
  */
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
@@ -20,6 +20,9 @@ export default (appInfo: EggAppInfo) => {
     csrf: {
       enable: false,
     },
+  };
+  config.view = {
+    defaultViewEngine: 'nunjucks',
   };
 
   // add your special config in here
