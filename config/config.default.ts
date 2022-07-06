@@ -2,7 +2,7 @@
  * @Author: nhsoft.wh
  * @Date: 2022-07-05 00:33:56
  * @LastEditors: nhsoft.wh
- * @LastEditTime: 2022-07-06 00:20:47
+ * @LastEditTime: 2022-07-07 00:15:36
  * @Description: file content
  */
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
@@ -15,7 +15,7 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1656952413095_9714';
 
   // add your egg config in here
-  config.middleware = [];
+  config.middleware = ['logger'];
   config.security = {
     csrf: {
       enable: false,
