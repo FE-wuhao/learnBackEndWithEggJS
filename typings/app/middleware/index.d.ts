@@ -2,10 +2,10 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportLogger from '../../../app/middleware/logger';
+import ExportMyLogger from '../../../app/middleware/myLogger';
 
 declare module 'egg' {
   interface IMiddleware {
-    logger: typeof ExportLogger;
+    myLogger: typeof ExportMyLogger;
   }
 }

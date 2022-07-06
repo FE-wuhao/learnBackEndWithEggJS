@@ -2,7 +2,7 @@
  * @Author: nhsoft.wh
  * @Date: 2022-07-05 00:33:56
  * @LastEditors: nhsoft.wh
- * @LastEditTime: 2022-07-07 00:15:36
+ * @LastEditTime: 2022-07-07 00:34:47
  * @Description: file content
  */
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
@@ -15,7 +15,14 @@ export default (appInfo: EggAppInfo) => {
   config.keys = appInfo.name + '_1656952413095_9714';
 
   // add your egg config in here
-  config.middleware = ['logger'];
+  // 全局启用的中间件
+  config.middleware = [];
+  // config.middleware = ['myLogger'];
+  // 中间件logger的配置（作用域为全局），配置过后，在中间件logger的形参中能拿到配置
+  config.myLogger = {
+    allowedMethod: ['POST'],
+  };
+
   config.security = {
     csrf: {
       enable: false,
@@ -28,6 +35,10 @@ export default (appInfo: EggAppInfo) => {
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
+    // 这边配置等效于上面直接配置，这是为什么呢？
+    // myLogger: {
+    //   allowedMethod: ['POST'],
+    // },
   };
 
   // the return config will combines to EggAppConfig

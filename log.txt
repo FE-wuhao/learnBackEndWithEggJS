@@ -1,3 +1,13 @@
 Thu Jul 07 2022 00:16:50 GMT+0800 (中国标准时间) -- GET -- / -- 2ms
 Thu Jul 07 2022 00:16:56 GMT+0800 (中国标准时间) -- GET -- /dog -- 1496ms
 Thu Jul 07 2022 00:18:15 GMT+0800 (中国标准时间) -- POST -- /test/10086?name=wuhao -- 1ms
+Thu Jul 07 2022 00:24:22 GMT+0800 (中国标准时间) -- GET -- /dog -- 1508ms
+Thu Jul 07 2022 00:28:30 GMT+0800 (中国标准时间) -- POST -- /test/10086?name=wuhao -- 0ms
+Thu Jul 07 2022 00:29:47 GMT+0800 (中国标准时间) -- POST -- /test/10086?name=wuhao -- 2ms
+Thu Jul 07 2022 00:35:54 GMT+0800 (中国标准时间) -- GET -- /dog -- 1706ms
+Thu Jul 07 2022 00:36:21 GMT+0800 (中国标准时间) -- GET -- /dog -- 645ms
+Thu Jul 07 2022 00:36:39 GMT+0800 (中国标准时间) -- GET -- /dog -- 888ms
+Thu Jul 07 2022 00:36:41 GMT+0800 (中国标准时间) -- GET -- /dog -- 346ms
+Thu Jul 07 2022 00:36:43 GMT+0800 (中国标准时间) -- GET -- /dog -- 351ms
+Thu Jul 07 2022 00:37:40 GMT+0800 (中国标准时间) -- GET -- /dog -- 1761ms
+Thu Jul 07 2022 00:37:45 GMT+0800 (中国标准时间) -- GET -- /dog -- 488ms
