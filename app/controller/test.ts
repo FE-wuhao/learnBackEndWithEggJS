@@ -2,7 +2,7 @@
  * @Author: nhsoft.wh
  * @Date: 2022-07-05 22:16:11
  * @LastEditors: nhsoft.wh
- * @LastEditTime: 2022-07-07 23:37:33
+ * @LastEditTime: 2022-07-13 21:54:11
  * @Description: file content
  */
 import { Controller } from 'egg';
@@ -17,9 +17,7 @@ export default class TestController extends Controller {
 
     const { config } = ctx.app;
 
-    ctx.body = { ...query, id, body, baseUrl: config.baseUrl };
-
-    ctx.status = 200;
+    ctx.helper.success({ ctx, res: { ...query, id, body, baseUrl: config.baseUrl } });
   }
 
   async getDog() {
