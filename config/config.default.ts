@@ -2,7 +2,7 @@
  * @Author: nhsoft.wh
  * @Date: 2022-07-05 00:33:56
  * @LastEditors: nhsoft.wh
- * @LastEditTime: 2022-07-07 23:41:27
+ * @LastEditTime: 2022-08-19 15:37:38
  * @Description: file content
  */
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
@@ -23,6 +23,9 @@ export default (appInfo: EggAppInfo) => {
     allowedMethod: ['POST'],
   };
 
+  config.logger = {
+    consoleLevel: 'DEBUG',
+  };
   config.security = {
     csrf: {
       enable: false,
