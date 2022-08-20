@@ -2,10 +2,15 @@
  * @Author: nhsoft.wh
  * @Date: 2022-07-05 22:16:11
  * @LastEditors: nhsoft.wh
- * @LastEditTime: 2022-08-19 15:35:01
+ * @LastEditTime: 2022-08-20 09:43:04
  * @Description: file content
  */
 import { Controller } from 'egg';
+import { MongoClient } from 'mongodb';
+
+const url = 'mongodb://localhost:27017/';
+
+const client = new MongoClient(url);
 
 export default class TestController extends Controller {
   async index() {
@@ -29,11 +34,26 @@ export default class TestController extends Controller {
     // // 打印接口返回内容
     // ctx.response.body = this.app.echo(image.data.message);
 
-    // 测试使用logger中间件调试
-    ctx.logger.debug('debug');
-    ctx.logger.info('info');
-    ctx.logger.warn('warn');
-    ctx.logger.error(new Error('ddsfdsf'));
+    // // 测试使用logger中间件调试
+    // ctx.logger.debug('debug');
+    // ctx.logger.info('info');
+    // ctx.logger.warn('warn');
+    // ctx.logger.error(new Error('ddsfdsf'));
+
+    // 测试连接mongodb
+    try {
+      await client.connect();
+
+      const db = client.db('test');
+
+      const res = await db.command({ ping: 1 });
+
+      console.log(res, 'db ping');
+    } catch (err) {
+      console.log(err, 'error');
+    } finally {
+      await client.close();
+    }
   }
 
   async getDog() {

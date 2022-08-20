@@ -26,7 +26,8 @@
     "axios": "^0.27.2",
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
-    "egg-view-nunjucks": "^2.3.0"
+    "egg-view-nunjucks": "^2.3.0",
+    "mongodb": "^4.9.0"
   },
   "devDependencies": {
     "@eggjs/tsconfig": "^1.0.0",

@@ -2,16 +2,23 @@
  * @Author: nhsoft.wh
  * @Date: 2022-07-07 00:02:29
  * @LastEditors: nhsoft.wh
- * @LastEditTime: 2022-07-07 23:41:05
+ * @LastEditTime: 2022-08-19 17:44:10
  * @Description: 中间件要默认导出一个函数
  */
-import { Application, Context, EggAppConfig } from 'egg';
+import {
+  // Application,
+  Context,
+  EggAppConfig,
+} from 'egg';
 import { appendFileSync } from 'fs';
 
-export default (options: EggAppConfig['myLogger'], app: Application) => {
-  console.log(options, 'options');
+export default (
+  options: EggAppConfig['myLogger']
+  // , app: Application
+) => {
+  // console.log(options, 'options');
 
-  console.log(app.config.logger, 'app.config.logger');
+  // console.log(app.config.logger, 'app.config.logger');
 
   return async (ctx: Context, next: () => Promise<any>): Promise<any> => {
     const startTime = Date.now();
